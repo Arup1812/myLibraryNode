@@ -6,8 +6,8 @@
     <label>Author</label>
     <select name="author">
     <% authors.forEach(author => { %>
-        <% if(author.id === book.author){ %> 
-            <option selected label="<%= author.name %>" value="<%= author.id %>"></option>
+        <% if(author.id == book.author){ %> 
+            <option selected="selected" label="<%= author.name %>" value="<%= author.id %>"></option>
         <% } else{ %> 
             <option label="<%= author.name %>" value="<%= author.id %>"></option>
         <% } %> 
@@ -21,7 +21,7 @@
 </div>
 <div>
     <label>Page Count</label>
-    <input type="number" name="pageCount" min="1" value="book.pageCount">
+    <input type="number" name="pageCount" min="1" value="<%= book.pageCount %>">
 </div>
 <div>
     <label>Cover</label>
